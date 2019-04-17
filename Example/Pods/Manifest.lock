@@ -1,0 +1,16 @@
+PODS:
+  - MustacheFoundation (0.1.0)
+
+DEPENDENCIES:
+  - MustacheFoundation (from `../`)
+
+EXTERNAL SOURCES:
+  MustacheFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MustacheFoundation: 9e564518d5bf90fdc89cf4d0e2d1544d42730117
+
+PODFILE CHECKSUM: 85104f293d0032f481226e98ae0d3d0e577eb147
+
+COCOAPODS: 1.6.1

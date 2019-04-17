@@ -1,0 +1,6 @@
+framework module MustacheFoundation {
+  umbrella header "MustacheFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

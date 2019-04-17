@@ -1,0 +1,22 @@
+{
+  "name": "MustacheFoundation",
+  "version": "0.1.0",
+  "summary": "A short description of MustacheFoundation.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/sadiq81/MustacheFoundation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sadiq81": "th@mustache.dk"
+  },
+  "source": {
+    "git": "https://github.com/sadiq81/MustacheFoundation.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MustacheFoundation/Classes/**/*"
+}

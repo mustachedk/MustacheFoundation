@@ -1,0 +1,6 @@
+framework module Pods_MustacheFoundation_Example {
+  umbrella header "Pods-MustacheFoundation_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
