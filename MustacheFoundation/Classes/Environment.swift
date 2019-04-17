@@ -36,6 +36,6 @@ public func pListValue<T>(_ key: String, name: String) -> T? {
     guard let plistDict = try? PropertyListSerialization.propertyList(from: plistData,
                                                                       options: .mutableContainersAndLeaves,
                                                                       format: &format) as? [String: AnyObject] else { return nil }
-    let myValue = plistDict?[key] as? T
+    let myValue = plistDict[key] as? T
     return myValue
 }

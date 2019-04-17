@@ -9,13 +9,13 @@ public extension Array where Element: Equatable {
     }
 
     mutating func moveToFront(element: Element) {
-        guard let index = self.index(where: { index -> Bool in return index == element }) else { return }
+        guard let index = self.firstIndex(where: { index -> Bool in return index == element }) else { return }
         self.rearrange(fromIndex: index, toIndex: 0)
     }
 
     @discardableResult
     mutating func remove(element: Element) -> Int {
-        guard let index = self.index(where: { index -> Bool in return index == element }) else { return -1 }
+        guard let index = self.firstIndex(where: { index -> Bool in return index == element }) else { return -1 }
         self.remove(at: index)
         return index
     }
@@ -23,7 +23,7 @@ public extension Array where Element: Equatable {
     @discardableResult
     mutating func remove(elements: [Element]) -> [Element] {
         for element in elements {
-            guard let index = self.index(where: { index -> Bool in return index == element }) else { continue }
+            guard let index = self.firstIndex(where: { index -> Bool in return index == element }) else { continue }
             self.remove(at: index)
         }
         return self
