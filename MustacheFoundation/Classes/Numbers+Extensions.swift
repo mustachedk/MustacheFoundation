@@ -35,7 +35,7 @@ public extension Int {
         return String(format: "%\(format)d", self)
     }
 
-    public var string: String { return "\(self)" }
+    var string: String { return "\(self)" }
 }
 
 public extension UInt {
