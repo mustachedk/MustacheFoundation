@@ -1,7 +1,12 @@
-
 import Foundation
 
+public extension Substring {
+    var intValue: Int? { return Int(String(self)) }
+}
+
 public extension String {
+
+    var intValue: Int? { return Int(self) }
 
     func capitalizingFirstLetter() -> String {
         let first = String(self.prefix(1)).capitalized
