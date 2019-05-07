@@ -26,7 +26,7 @@ public func infoForKey(_ key: String) -> String {
 }
 
 public enum Configuration: String {
-    case development, alpha, beta, staging, release
+    case development, alpha, beta, staging, production
 }
 
 public func pListValue<T>(_ key: String, name: String) -> T? {
