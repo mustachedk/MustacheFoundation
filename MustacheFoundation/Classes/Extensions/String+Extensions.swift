@@ -2,6 +2,7 @@ import Foundation
 
 public extension Substring {
     var intValue: Int? { return Int(String(self)) }
+    var string: String { return String(self) }
 }
 
 public extension String {
