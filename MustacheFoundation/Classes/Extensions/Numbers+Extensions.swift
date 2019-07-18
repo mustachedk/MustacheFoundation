@@ -62,6 +62,26 @@ public extension Float {
     var string: String { return "\(self)" }
 }
 
+public extension String {
+
+    var int: Int { return Int(self) ?? 0 }
+
+    var double: Double { return Double(self) ?? 0 }
+
+    var float: Float { return Float(self) ?? 0 }
+
+    var cgfloat: CGFloat { return CGFloat(self.float) ?? 0 }
+
+    var uint: UInt { return UInt(self) ?? 0 }
+
+    var number: NSNumber {
+        let double = Double(self) ?? 0
+        let number = NSNumber(value: double)
+        return number
+    }
+
+}
+
 infix operator &=
 
 public func &=(lhs: inout Bool, rhs: Bool) {

@@ -7,8 +7,6 @@ public extension Substring {
 
 public extension String {
 
-    var intValue: Int? { return Int(self) }
-
     func capitalizingFirstLetter() -> String {
         let first = String(self.prefix(1)).capitalized
         let other = String(self.dropFirst())
@@ -23,12 +21,6 @@ public extension String {
 public extension String {
 
     var localized: String { return NSLocalizedString(self, comment: "") }
-
-    var number: NSNumber {
-        let double = Double(self)!
-        let number = NSNumber(value: double)
-        return number
-    }
 
     var gif: Data {
         if let path = Bundle.main.path(forResource: self, ofType: "gif") {
