@@ -1,6 +1,6 @@
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
 
     func string(key: Key) -> String? {
 
