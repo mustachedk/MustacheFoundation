@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MustacheFoundation'
-    s.version          = '0.2.1'
+    s.version          = '0.2.2'
     s.summary          = 'Helper methods used at Mustache when creating new apps.'
     s.homepage         = 'https://github.com/mustachedk/MustacheFoundation'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
     s.source_files = 'MustacheFoundation/Classes/**/*'
 
     s.frameworks = 'Foundation'
-    s.dependency = 'CommonCrypto'
+    s.dependency 'CommonCrypto'
 
 end
