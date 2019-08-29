@@ -23,6 +23,15 @@
 		9CF6B2B56932C3A738F83804CF02A3E8 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A5A97ED4616EDA967A71F5AA1A099 /* UserDefaults+Extensions.swift */; };
 		CEEF72B3A938DD1C64C8FB040AE1EF25 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314BAAD68A1543DB0C56515A999BAE2 /* Array+Extensions.swift */; };
 		D01CD03F5B8532EE7D202BA2FC543CFC /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C82F2F6E6825B38442E447815CFF96 /* CharacterSet+Extensions.swift */; };
+		D31C510E52501AB804535BAC /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5E42777F818AC4B10CD7 /* String+Hash.swift */; };
+		D31C5152DB4664F79C180EA6 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C500CCD3B464B2195D2E0 /* NumberFormatter+Extensions.swift */; };
+		D31C53D85C33763F89B3269D /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C53C99B08307D8F2D8E74 /* JSONDecoder+Extensions.swift */; };
+		D31C541A37E45314853A5D19 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5D9A4FB6B59BC533C37D /* Locale+Extensions.swift */; };
+		D31C561C1D804878D37A126C /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C58212BB9BBEEE5BBCC2B /* String+HTML.swift */; };
+		D31C593B05CF72E14476EB3D /* InlineConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5FBE691FD4B29FFAB22A /* InlineConfigurable.swift */; };
+		D31C5DDB0051A45254A27A56 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C51CB59EFB444243FC984 /* DateFormatter+Extensions.swift */; };
+		D31C5E0E6A06200F70FE8D9B /* NSRegularExpression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5CDE9B49DD559E57E2FD /* NSRegularExpression+Extensions.swift */; };
+		D31C5FA025BE6C45803B510C /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C561F0E789EEF5D8FFAB3 /* Data+Extensions.swift */; };
 		D696A3F00CD95CD963C83EF4725700A8 /* Pods-MustacheFoundation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E94AC072C664D21B424302A76B1D65 /* Pods-MustacheFoundation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D997A3030F204DC33C134461567EE05A /* Calendar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F39897320AB063CC29AD27E4147DC /* Calendar+Extensions.swift */; };
 		DDBE0D497D288C92225A0BC9EFCFCD8A /* Pods-MustacheFoundation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF1EAB3E8986F4C35AAD4488E6BF2F4 /* Pods-MustacheFoundation_Example-dummy.m */; };
@@ -91,6 +100,15 @@
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CC90E62C39EE49F0E369E924EAF4D728 /* Pods-MustacheFoundation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MustacheFoundation_Tests.modulemap"; sourceTree = "<group>"; };
 		CF9A4F85B093F0E122BAF9421A995958 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D31C500CCD3B464B2195D2E0 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		D31C51CB59EFB444243FC984 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		D31C53C99B08307D8F2D8E74 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		D31C561F0E789EEF5D8FFAB3 /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		D31C58212BB9BBEEE5BBCC2B /* String+HTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
+		D31C5CDE9B49DD559E57E2FD /* NSRegularExpression+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extensions.swift"; sourceTree = "<group>"; };
+		D31C5D9A4FB6B59BC533C37D /* Locale+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
+		D31C5E42777F818AC4B10CD7 /* String+Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Hash.swift"; sourceTree = "<group>"; };
+		D31C5FBE691FD4B29FFAB22A /* InlineConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineConfigurable.swift; sourceTree = "<group>"; };
 		DC718305D26D23F8422A4F2A44527F42 /* Pods-MustacheFoundation_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MustacheFoundation_Example-umbrella.h"; sourceTree = "<group>"; };
 		DF72D602435F0E83901A8D49EB67AC7A /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F9EDC2203EDA3BB70E3127A54C51A9E9 /* URL+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -244,6 +262,15 @@
 				DF72D602435F0E83901A8D49EB67AC7A /* String+Extensions.swift */,
 				F9EDC2203EDA3BB70E3127A54C51A9E9 /* URL+Extensions.swift */,
 				BE6A5A97ED4616EDA967A71F5AA1A099 /* UserDefaults+Extensions.swift */,
+				D31C561F0E789EEF5D8FFAB3 /* Data+Extensions.swift */,
+				D31C51CB59EFB444243FC984 /* DateFormatter+Extensions.swift */,
+				D31C5FBE691FD4B29FFAB22A /* InlineConfigurable.swift */,
+				D31C53C99B08307D8F2D8E74 /* JSONDecoder+Extensions.swift */,
+				D31C5D9A4FB6B59BC533C37D /* Locale+Extensions.swift */,
+				D31C5CDE9B49DD559E57E2FD /* NSRegularExpression+Extensions.swift */,
+				D31C500CCD3B464B2195D2E0 /* NumberFormatter+Extensions.swift */,
+				D31C5E42777F818AC4B10CD7 /* String+Hash.swift */,
+				D31C58212BB9BBEEE5BBCC2B /* String+HTML.swift */,
 			);
 			name = Extensions;
 			path = MustacheFoundation/Classes/Extensions;
@@ -452,6 +479,15 @@
 				1BFB15DA23E82D539E063C6317CC7A3B /* String+Extensions.swift in Sources */,
 				056FE4101D18CDBDE691AA8E74FD09AF /* URL+Extensions.swift in Sources */,
 				9CF6B2B56932C3A738F83804CF02A3E8 /* UserDefaults+Extensions.swift in Sources */,
+				D31C5FA025BE6C45803B510C /* Data+Extensions.swift in Sources */,
+				D31C5DDB0051A45254A27A56 /* DateFormatter+Extensions.swift in Sources */,
+				D31C593B05CF72E14476EB3D /* InlineConfigurable.swift in Sources */,
+				D31C53D85C33763F89B3269D /* JSONDecoder+Extensions.swift in Sources */,
+				D31C541A37E45314853A5D19 /* Locale+Extensions.swift in Sources */,
+				D31C5E0E6A06200F70FE8D9B /* NSRegularExpression+Extensions.swift in Sources */,
+				D31C5152DB4664F79C180EA6 /* NumberFormatter+Extensions.swift in Sources */,
+				D31C510E52501AB804535BAC /* String+Hash.swift in Sources */,
+				D31C561C1D804878D37A126C /* String+HTML.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
