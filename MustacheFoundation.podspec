@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
     s.source_files = 'MustacheFoundation/Classes/**/*'
 
     s.frameworks = 'Foundation'
-    s.dependency 'CommonCryptoSwift'
 
 end
