@@ -1,5 +1,6 @@
 
 import Foundation
+import CommonCrypto
 
 // Defines types of hash string outputs available
 public enum HashOutputType {
