@@ -1,13 +1,5 @@
 import Foundation
 
-infix operator +
-
-public func +<Key, Value>(lhs: Dictionary<Key, Value>, rhs: Dictionary<Key, Value>) -> Dictionary<Key, Value> {
-    var combined = rhs
-    lhs.forEach { (key: Key, value: Value) in combined[key] = value }
-    return combined
-}
-
 public extension Dictionary {
 
     func string(key: Key) -> String? {
