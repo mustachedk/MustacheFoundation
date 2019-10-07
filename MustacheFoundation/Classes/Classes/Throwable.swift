@@ -13,12 +13,12 @@ import Foundation
 //      self.property = guardedData.compactMap { $0.value }
 //  }
 
-enum Throwable<T: Decodable>: Decodable {
+public enum Throwable<T: Decodable>: Decodable {
 
     case success(T)
     case failure(Error)
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         do {
             let decoded = try T(from: decoder)
             self = .success(decoded)
@@ -28,7 +28,7 @@ enum Throwable<T: Decodable>: Decodable {
     }
 }
 
-extension Throwable {
+public extension Throwable {
 
     var value: T? {
         switch self {
