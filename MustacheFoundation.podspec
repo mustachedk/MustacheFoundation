@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
 
     s.ios.deployment_target = '11.0'
 
-    s.source_files = 'MustacheFoundation/Classes/**/*'
-    s.preserve_paths = 'MustacheFoundation/Assets/**/*'
+    s.source_files = 'Sources/Classes/**/*'
+    s.preserve_paths = 'Sources/Assets/**/*'
     s.frameworks = 'Foundation'
     s.script_phase = { :name => 'CommonCrypto', :script => 'sh ${PODS_ROOT}/MustacheFoundation/MustacheFoundation/Assets/install_common_crypto.sh', :execution_position => :before_compile }
 
