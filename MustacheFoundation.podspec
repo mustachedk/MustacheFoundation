@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/MustacheFoundation/Classes/**/*'
     s.preserve_paths = 'Sources/MustacheFoundation/Assets/**/*'
     s.frameworks = 'Foundation'
-    s.script_phase = { :name => 'CommonCrypto', :script => 'sh ${PODS_ROOT}/MustacheFoundation/MustacheFoundation/Assets/install_common_crypto.sh', :execution_position => :before_compile }
+    s.script_phase = { :name => 'CommonCrypto', :script => 'sh ${PODS_ROOT}/MustacheFoundation/MustacheFoundation/Sources/Assets/install_common_crypto.sh', :execution_position => :before_compile }
 
 end
