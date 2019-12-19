@@ -71,7 +71,7 @@ public extension String {
 
     var float: Float { return Float(self) ?? 0 }
 
-    var cgfloat: CGFloat { return CGFloat(self.float) ?? 0 }
+    var cgfloat: CGFloat { return CGFloat(self.float) }
 
     var uint: UInt { return UInt(self) ?? 0 }
 

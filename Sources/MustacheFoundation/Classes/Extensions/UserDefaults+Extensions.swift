@@ -33,17 +33,17 @@ public extension UserDefaults {
     }
 
     func decodeObject<T>(forKey key: String) -> T? where T: Decodable {
-        guard let saved = self.data(forKey: key) as? Data else { return nil }
+        guard let saved = self.data(forKey: key) else { return nil }
         let decoder = JSONDecoder()
         let loaded = try? decoder.decode(T.self, from: saved)
         return loaded
     }
 
     func encode<T>(_ value: T?, forKey key: String) where T: Encodable {
-        
+
         let string = "\(UserDefaults.didChangeNotification.rawValue)-\(key)"
         let name = NSNotification.Name(rawValue: string)
-        
+
         let encoder = JSONEncoder()
         guard let value = value, let encoded = try? encoder.encode(value) else {
             self.removeObject(forKey: key)
