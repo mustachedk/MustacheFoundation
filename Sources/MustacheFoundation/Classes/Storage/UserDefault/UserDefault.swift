@@ -10,15 +10,15 @@ import Foundation
 
 @propertyWrapper
 class UserDefault<Value: Codable> {
-    
+
     fileprivate var key: String
     fileprivate var defaultValue: Value
-    
-    init(_ key: String, defaultValue: Value) {
+
+    public init(_ key: String, defaultValue: Value) {
         self.key = key
         self.defaultValue = defaultValue
     }
-    
+
     open var wrappedValue: Value {
         get { UserDefaults.standard.decodeObject(forKey: key) ?? self.defaultValue }
         set { UserDefaults.standard.encode(newValue, forKey: key) }
@@ -27,13 +27,13 @@ class UserDefault<Value: Codable> {
 
 @propertyWrapper
 open class UserDefaultOptional<Value: Codable> {
-    
+
     fileprivate var key: String
-    
+
     public  init(_ key: String) {
         self.key = key
     }
-    
+
     open var wrappedValue: Value? {
         get { UserDefaults.standard.decodeObject(forKey: key) }
         set { UserDefaults.standard.encode(newValue, forKey: key) }
