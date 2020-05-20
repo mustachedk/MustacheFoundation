@@ -13,16 +13,16 @@ fileprivate class SingletonStorage {
 }
 
 @propertyWrapper
-class Singleton<Value> {
-    
+open class Singleton<Value> {
+
     fileprivate var key: String
     fileprivate var defaultValue: Value
-    
-    init(_ key: String, defaultValue: Value) {
+
+    public init(_ key: String, defaultValue: Value) {
         self.key = key
         self.defaultValue = defaultValue
     }
-    
+
     open var wrappedValue: Value {
         get { return (SingletonStorage.singles[self.key] as? Value) ?? self.defaultValue }
         set { SingletonStorage.singles[self.key] = newValue }
@@ -31,16 +31,15 @@ class Singleton<Value> {
 
 @propertyWrapper
 open class SingletonOptional<Value> {
-    
+
     fileprivate var key: String
-    
+
     public  init(_ key: String) {
         self.key = key
     }
-    
+
     open var wrappedValue: Value? {
         get { return SingletonStorage.singles[self.key] as? Value }
         set { SingletonStorage.singles[self.key] = newValue }
     }
 }
-

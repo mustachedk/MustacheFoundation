@@ -9,16 +9,16 @@
 import Foundation
 
 @propertyWrapper
-class Keychain<Value: Codable> {
-    
+open class Keychain<Value: Codable> {
+
     fileprivate var key: String
     fileprivate var defaultValue: Value
-    
-    init(_ key: String, defaultValue: Value) {
+
+    public init(_ key: String, defaultValue: Value) {
         self.key = key
         self.defaultValue = defaultValue
     }
-    
+
     open var wrappedValue: Value {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: self.key) else { return self.defaultValue }
@@ -37,13 +37,13 @@ class Keychain<Value: Codable> {
 
 @propertyWrapper
 open class KeychainOptional<Value: Codable> {
-    
+
     fileprivate var key: String
-    
+
     public  init(_ key: String) {
         self.key = key
     }
-    
+
     open var wrappedValue: Value? {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: self.key) else { return nil }
