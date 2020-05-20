@@ -9,7 +9,7 @@
 import Foundation
 
 @propertyWrapper
-class UserDefault<Value: Codable> {
+open class UserDefault<Value: Codable> {
 
     fileprivate var key: String
     fileprivate var defaultValue: Value
