@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MustacheFoundation'
-    s.version          = '1.1.0'
+    s.version          = '1.2.1'
     s.summary          = 'Helper methods used at Mustache when creating new apps.'
     s.homepage         = 'https://github.com/mustachedk/MustacheFoundation'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/MustacheFoundation/Classes/**/*'
     s.preserve_paths = 'Sources/MustacheFoundation/Assets/**/*'
     s.frameworks = 'Foundation'
-    s.script_phase = { :name => 'CommonCrypto', :script => 'sh ${PODS_ROOT}/MustacheFoundation/Sources/MustacheFoundation/Assets/install_common_crypto.sh', :execution_position => :before_compile }
 
 end
