@@ -35,7 +35,7 @@ public extension UserDefaults {
     func decodeObject<T>(forKey key: String) -> T? where T: Decodable {
         guard let saved = self.data(forKey: key) else { return nil }
         let decoder = JSONDecoder()
-        let loaded = try? decoder.decode(T.self, from: saved)
+        let loaded = try? decoder.decode([T].self, from: saved).first
         return loaded
     }
 
@@ -45,7 +45,7 @@ public extension UserDefaults {
         let name = NSNotification.Name(rawValue: string)
 
         let encoder = JSONEncoder()
-        guard let value = value, let encoded = try? encoder.encode(value) else {
+        guard let value = value, let encoded = try? encoder.encode([value]) else {
             self.removeObject(forKey: key)
             NotificationCenter.default.post(name: name, object: nil)
             return

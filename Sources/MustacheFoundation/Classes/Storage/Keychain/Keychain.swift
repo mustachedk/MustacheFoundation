@@ -22,11 +22,11 @@ open class Keychain<Value: Codable> {
     open var wrappedValue: Value {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: self.key) else { return self.defaultValue }
-            guard let value = try? JSONDecoder().decode(Value.self, from: data) else { return self.defaultValue }
+            guard let value = try? JSONDecoder().decode([Value].self, from: data).first else { return self.defaultValue }
             return value
         }
         set {
-            guard let data = try? JSONEncoder().encode(newValue) else {
+            guard let data = try? JSONEncoder().encode([newValue]) else {
                 KeychainWrapper.standard.removeObject(forKey: self.key)
                 return
             }
@@ -47,7 +47,7 @@ open class KeychainOptional<Value: Codable> {
     open var wrappedValue: Value? {
         get {
             guard let data = KeychainWrapper.standard.data(forKey: self.key) else { return nil }
-            guard let value = try? JSONDecoder().decode(Value.self, from: data) else { return nil }
+            guard let value = try? JSONDecoder().decode([Value].self, from: data).first else { return nil }
             return value
         }
         set {
@@ -55,7 +55,7 @@ open class KeychainOptional<Value: Codable> {
                 KeychainWrapper.standard.removeObject(forKey: self.key)
                 return
             }
-            guard let data = try? JSONEncoder().encode(value) else {
+            guard let data = try? JSONEncoder().encode([value]) else {
                 KeychainWrapper.standard.removeObject(forKey: self.key)
                 return
             }
