@@ -36,6 +36,11 @@ public extension Int {
         return String(format: "%\(format)d", self)
     }
 
+    func roundUp(divisor: Int) -> Int {
+        let rem = self % divisor
+        return rem == 0 ? self : self + divisor - rem
+    }
+
     var string: String { return "\(self)" }
 }
 
