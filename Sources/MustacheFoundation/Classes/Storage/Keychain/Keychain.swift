@@ -23,13 +23,13 @@ open class Keychain<Value: Codable> {
 
     open var wrappedValue: Value {
         get {
-            guard let data = KeychainWrapper.standard.data(forKey: self.key) else { return self.defaultValue }
+            guard let data = KeychainWrapper.standard.data(forKey: self.key, withAccessibility: self.accessibility) else { return self.defaultValue }
             guard let value = try? JSONDecoder().decode([Value].self, from: data).first else { return self.defaultValue }
             return value
         }
         set {
             guard let data = try? JSONEncoder().encode([newValue]) else {
-                KeychainWrapper.standard.removeObject(forKey: self.key)
+                KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: self.accessibility)
                 return
             }
             KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
@@ -50,17 +50,17 @@ open class KeychainOptional<Value: Codable> {
 
     open var wrappedValue: Value? {
         get {
-            guard let data = KeychainWrapper.standard.data(forKey: self.key) else { return nil }
+            guard let data = KeychainWrapper.standard.data(forKey: self.key, withAccessibility: self.accessibility) else { return nil }
             guard let value = try? JSONDecoder().decode([Value].self, from: data).first else { return nil }
             return value
         }
         set {
             guard let value = newValue else {
-                KeychainWrapper.standard.removeObject(forKey: self.key)
+                KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: self.accessibility)
                 return
             }
             guard let data = try? JSONEncoder().encode([value]) else {
-                KeychainWrapper.standard.removeObject(forKey: self.key)
+                KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: self.accessibility)
                 return
             }
             KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
