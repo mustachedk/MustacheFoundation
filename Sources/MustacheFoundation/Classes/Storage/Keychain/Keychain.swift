@@ -13,10 +13,12 @@ open class Keychain<Value: Codable> {
 
     fileprivate var key: String
     fileprivate var defaultValue: Value
+    fileprivate var accessibility: KeychainItemAccessibility
 
     public init(_ key: String, defaultValue: Value, accessibility: KeychainItemAccessibility = .whenUnlocked) {
         self.key = key
         self.defaultValue = defaultValue
+        self.accessibility = accessibility
     }
 
     open var wrappedValue: Value {
@@ -30,7 +32,7 @@ open class Keychain<Value: Codable> {
                 KeychainWrapper.standard.removeObject(forKey: self.key)
                 return
             }
-            KeychainWrapper.standard.set(data, forKey: self.key)
+            KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
         }
     }
 }
@@ -39,9 +41,11 @@ open class Keychain<Value: Codable> {
 open class KeychainOptional<Value: Codable> {
 
     fileprivate var key: String
+    fileprivate var accessibility: KeychainItemAccessibility
 
     public  init(_ key: String, accessibility: KeychainItemAccessibility = .whenUnlocked) {
         self.key = key
+        self.accessibility = accessibility
     }
 
     open var wrappedValue: Value? {
@@ -59,7 +63,7 @@ open class KeychainOptional<Value: Codable> {
                 KeychainWrapper.standard.removeObject(forKey: self.key)
                 return
             }
-            KeychainWrapper.standard.set(data, forKey: self.key)
+            KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
         }
     }
 }
