@@ -14,7 +14,7 @@ open class Keychain<Value: Codable> {
     fileprivate var key: String
     fileprivate var defaultValue: Value
 
-    public init(_ key: String, defaultValue: Value) {
+    public init(_ key: String, defaultValue: Value, accessibility: KeychainItemAccessibility = .whenUnlocked) {
         self.key = key
         self.defaultValue = defaultValue
     }
@@ -40,7 +40,7 @@ open class KeychainOptional<Value: Codable> {
 
     fileprivate var key: String
 
-    public  init(_ key: String) {
+    public  init(_ key: String, accessibility: KeychainItemAccessibility = .whenUnlocked) {
         self.key = key
     }
 
