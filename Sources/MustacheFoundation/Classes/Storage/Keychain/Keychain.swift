@@ -32,6 +32,12 @@ open class Keychain<Value: Codable> {
                 KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: self.accessibility)
                 return
             }
+            let success = KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
+            if !success {
+                for accessibility in KeychainItemAccessibility.allCases {
+                    KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: accessibility)
+                }
+            }
             KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
         }
     }
@@ -62,6 +68,12 @@ open class KeychainOptional<Value: Codable> {
             guard let data = try? JSONEncoder().encode([value]) else {
                 KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: self.accessibility)
                 return
+            }
+            let success = KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
+            if !success {
+                for accessibility in KeychainItemAccessibility.allCases {
+                    KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: accessibility)
+                }
             }
             KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
         }

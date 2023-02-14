@@ -32,7 +32,8 @@ protocol KeychainAttrRepresentable {
 }
 
 // MARK: - KeychainItemAccessibility
-public enum KeychainItemAccessibility {
+public enum KeychainItemAccessibility: CaseIterable {
+    
     /**
      The data in the keychain item cannot be accessed after a restart until the device has been unlocked once by the user.
 
@@ -99,6 +100,18 @@ public enum KeychainItemAccessibility {
         }
 
         return nil
+    }
+    
+    public static var allCases: [KeychainItemAccessibility] {
+        return [
+            .afterFirstUnlock,
+            .afterFirstUnlockThisDeviceOnly,
+            .always,
+            .whenPasscodeSetThisDeviceOnly,
+            .alwaysThisDeviceOnly,
+            .whenUnlocked,
+            .whenUnlockedThisDeviceOnly
+        ]
     }
 }
 
