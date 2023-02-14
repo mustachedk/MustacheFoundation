@@ -37,8 +37,9 @@ open class Keychain<Value: Codable> {
                 for accessibility in KeychainItemAccessibility.allCases {
                     KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: accessibility)
                 }
+                KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
             }
-            KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
+            
         }
     }
 }
@@ -74,8 +75,9 @@ open class KeychainOptional<Value: Codable> {
                 for accessibility in KeychainItemAccessibility.allCases {
                     KeychainWrapper.standard.removeObject(forKey: self.key, withAccessibility: accessibility)
                 }
+                KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
             }
-            KeychainWrapper.standard.set(data, forKey: self.key, withAccessibility: self.accessibility)
+            
         }
     }
 }
