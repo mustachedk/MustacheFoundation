@@ -14,4 +14,11 @@ public extension JSONDecoder {
         decoder.dateDecodingStrategy = .formatted(DateFormatter.yyyyMMdd)
         return decoder
     }()
+    
+    static let yyyyMMddTHHmmss: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.yyyMMddTHHmmss)
+        return decoder
+    }()
+    
 }
